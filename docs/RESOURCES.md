@@ -11,3 +11,8 @@
 * Official downloads: http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-2.html
 * Official wiki: http://www.orangepi.org/orangepiwiki/index.php/Orange_Pi_Zero_2
 * linux-sunxi wiki: https://linux-sunxi.org/Xunlong_Orange_Pi_Zero2
+
+# Allwinner
+
+* https://linux-sunxi.org/Allwinner_SoC_Family
+* H6161 page: https://linux-sunxi.org/H618
