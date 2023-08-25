@@ -1,0 +1,18 @@
+{
+    "search.exclude": {
+        "**/build/tmp": true,
+        "**/build/downloads": true,
+        "**/build/sstate-cache": true
+    },
+    "files.watcherExclude": {
+        "**/build/tmp": true,
+        "**/build/downloads": true,
+        "**/build/sstate-cache": true
+    },
+    "files.exclude": {
+        "**/.mypy_cache": true,
+        "**/cache": true,
+        "**/sstate-cache": true,
+        "**/.deja-dup-ignore": true
+    }
+}
