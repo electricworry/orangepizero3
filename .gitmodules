@@ -3,7 +3,7 @@
 	url = https://git.yoctoproject.org/poky
 [submodule "layers/meta-sunxi"]
 	path = layers/meta-sunxi
-	url = https://github.com/linux-sunxi/meta-sunxi.git
+	url = git@github.com:electricworry/meta-sunxi.git
 [submodule "layers/meta-arm"]
 	path = layers/meta-arm
 	url = https://git.yoctoproject.org/meta-arm
