@@ -2,12 +2,14 @@
     "search.exclude": {
         "**/build/tmp": true,
         "**/build/downloads": true,
-        "**/build/sstate-cache": true
+        "**/build/sstate-cache": true,
+        "./resources": true
     },
     "files.watcherExclude": {
         "**/build/tmp": true,
         "**/build/downloads": true,
-        "**/build/sstate-cache": true
+        "**/build/sstate-cache": true,
+        "./resources": true
     },
     "files.exclude": {
         "**/.mypy_cache": true,
