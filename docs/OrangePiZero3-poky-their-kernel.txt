@@ -1,0 +1,335 @@
+U-Boot SPL 2023.10-g (Oct 02 2023 - 14:39:59 +0000)
+DRAM: 4096 MiB
+Trying to boot from MMC1
+NOTICE:  BL31: v2.9(release):v2.9.0-dirty
+NOTICE:  BL31: Built : 14:12:59, May 22 2023
+NOTICE:  BL31: Detected Allwinner H616 SoC (1823)
+NOTICE:  BL31: Found U-Boot DTB at 0x4a0b22b8, model: OrangePi Zero3
+ERROR:   RSB: set run-time address: 0x10003
+
+
+U-Boot 2023.10-g (Oct 02 2023 - 14:39:59 +0000) Allwinner Technology
+
+CPU:   Allwinner H616 (SUN50I)
+Model: OrangePi Zero3
+DRAM:  4 GiB
+Core:  53 devices, 22 uclasses, devicetree: separate
+WDT:   Not starting watchdog@30090a0
+MMC:   mmc@4020000: 0
+Loading Environment from FAT... Unable to read "uboot.env" from mmc0:1... 
+In:    serial@5000000
+Out:   serial@5000000
+Err:   serial@5000000
+Allwinner mUSB OTG (Peripheral)
+Net:   eth0: ethernet@5020000using musb-hdrc, OUT ep1out IN ep1in STATUS ep2in
+MAC de:ad:be:ef:00:01
+HOST MAC de:ad:be:ef:00:00
+RNDIS ready
+, eth1: usb_ether
+starting USB...
+Bus usb@5101000: USB EHCI 1.00
+Bus usb@5101400: USB OHCI 1.0
+Bus usb@5200000: USB EHCI 1.00
+Bus usb@5200400: USB OHCI 1.0
+scanning bus usb@5101000 for devices... 1 USB Device(s) found
+scanning bus usb@5101400 for devices... 1 USB Device(s) found
+scanning bus usb@5200000 for devices... 1 USB Device(s) found
+scanning bus usb@5200400 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+Scanning mmc 0:1...
+Found U-Boot script /boot.scr
+495 bytes read in 4 ms (120.1 KiB/s)
+## Executing script at 4fc00000
+13103 bytes read in 2 ms (6.2 MiB/s)
+22390792 bytes read in 930 ms (23 MiB/s)
+Moving Image from 0x40080000 to 0x40200000, end=417e0000
+## Flattened Device Tree blob at 4fa00000
+   Booting using the fdt blob at 0x4fa00000
+Working FDT set to 4fa00000
+   Loading Device Tree to 0000000049ff9000, end 0000000049fff32e ... OK
+Working FDT set to 49ff9000
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 6.1.31 (oe-user@oe-host) (aarch64-poky-linux-gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41.0.20230926) #1 SMP Mon Nov  6 12:27:05 UTC 2023
+[    0.000000] Machine model: OrangePi Zero3
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x13f7e2040-0x13f7e3fff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000004007ffff]
+[    0.000000]   node   0: [mem 0x0000000040080000-0x000000013fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] cma: Reserved 128 MiB at 0x00000000f8000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] percpu: Embedded 19 pages/cpu s37992 r8192 d31640 u77824
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 845719
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: console=ttyS0,115200 console=tty1 root=/dev/mmcblk1p2 rootwait panic=10
+[    0.000000] printk: log_buf_len individual max cpu contribution: 131072 bytes
+[    0.000000] printk: log_buf_len total cpu_extra contributions: 393216 bytes
+[    0.000000] printk: log_buf_len min size: 131072 bytes
+[    0.000000] printk: log_buf_len: 524288 bytes
+[    0.000000] printk: early log buf free: 129088(98%)
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] software IO TLB: area num 4.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f4000000-0x00000000f8000000] (64MB)
+[    0.000000] Memory: 3891404K/4194304K available (13888K kernel code, 1450K rwdata, 3692K rodata, 2688K init, 499K bss, 171828K reserved, 131072K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000001] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000290] Console: colour dummy device 80x25
+[    0.000621] printk: console [tty1] enabled
+[    0.000711] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.000734] pid_max: default: 32768 minimum: 301
+[    0.000810] LSM: Security Framework initializing
+[    0.000846] Yama: becoming mindful.
+[    0.000947] AppArmor: AppArmor initialized
+[    0.001043] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.001077] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.002085] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.002666] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.002686] cblist_init_generic: Setting shift to 2 and lim to 1.
+[    0.002852] rcu: Hierarchical SRCU implementation.
+[    0.002864] rcu: 	Max phase no-delay instances is 1000.
+[    0.003868] smp: Bringing up secondary CPUs ...
+[    0.004412] Detected VIPT I-cache on CPU1
+[    0.004484] cacheinfo: Unable to detect cache hierarchy for CPU 1
+[    0.004519] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.005003] Detected VIPT I-cache on CPU2
+[    0.005057] cacheinfo: Unable to detect cache hierarchy for CPU 2
+[    0.005075] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.005521] Detected VIPT I-cache on CPU3
+[    0.005579] cacheinfo: Unable to detect cache hierarchy for CPU 3
+[    0.005597] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.005656] smp: Brought up 1 node, 4 CPUs
+[    0.005722] SMP: Total of 4 processors activated.
+[    0.005733] CPU features: detected: 32-bit EL0 Support
+[    0.005743] CPU features: detected: CRC32 instructions
+[    0.005812] CPU: All CPU(s) started at EL2
+[    0.005822] alternatives: applying system-wide alternatives
+[    0.008243] devtmpfs: initialized
+[    0.010907] Registered cp15_barrier emulation handler
+[    0.010926] Registered setend emulation handler
+[    0.011074] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.011101] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.015851] pinctrl core: initialized pinctrl subsystem
+[    0.017068] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.018101] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.018344] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.018527] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.018574] audit: initializing netlink subsys (disabled)
+[    0.018694] audit: type=2000 audit(0.016:1): state=initialized audit_enabled=0 res=1
+[    0.019029] thermal_sys: Registered thermal governor 'fair_share'
+[    0.019035] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.019047] thermal_sys: Registered thermal governor 'step_wise'
+[    0.019057] thermal_sys: Registered thermal governor 'user_space'
+[    0.019098] cpuidle: using governor menu
+[    0.019222] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.019308] ASID allocator initialised with 65536 entries
+[    0.019455] Serial: AMBA PL011 UART driver
+[    0.021334] platform 3001000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
+[    0.022830] platform 7010000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
+[    0.024635] KASLR disabled due to lack of seed
+[    0.030305] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.030319] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.030332] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.030342] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.030353] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.030364] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.030375] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.030385] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.031057] cryptd: max_cpu_qlen set to 1000
+[    0.096125] raid6: neonx8   gen()  1903 MB/s
+[    0.164185] raid6: neonx4   gen()  1863 MB/s
+[    0.232250] raid6: neonx2   gen()  1784 MB/s
+[    0.300313] raid6: neonx1   gen()  1531 MB/s
+[    0.368370] raid6: int64x8  gen()  1188 MB/s
+[    0.436429] raid6: int64x4  gen()  1320 MB/s
+[    0.504491] raid6: int64x2  gen()  1176 MB/s
+[    0.572540] raid6: int64x1  gen()   867 MB/s
+[    0.572551] raid6: using algorithm neonx8 gen() 1903 MB/s
+[    0.640596] raid6: .... xor() 1391 MB/s, rmw enabled
+[    0.640607] raid6: using neon recovery algorithm
+[    0.641701] iommu: Default domain type: Translated 
+[    0.641714] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.641970] SCSI subsystem initialized
+[    0.642139] usbcore: registered new interface driver usbfs
+[    0.642183] usbcore: registered new interface driver hub
+[    0.642218] usbcore: registered new device driver usb
+[    0.642429] pps_core: LinuxPPS API ver. 1 registered
+[    0.642441] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.642465] PTP clock support registered
+[    0.642727] ARM FF-A: FFA_VERSION returned not supported
+[    0.642985] Advanced Linux Sound Architecture Driver Initialized.
+[    0.643581] NetLabel: Initializing
+[    0.643592] NetLabel:  domain hash size = 128
+[    0.643602] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.643669] NetLabel:  unlabeled traffic allowed by default
+[    0.643680] mctp: management component transport protocol core
+[    0.643691] NET: Registered PF_MCTP protocol family
+[    0.644000] clocksource: Switched to clocksource arch_sys_counter
+[    0.644201] VFS: Disk quotas dquot_6.6.0
+[    0.644248] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.644772] AppArmor: AppArmor Filesystem Enabled
+[    0.651123] NET: Registered PF_INET protocol family
+[    0.651358] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.654694] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.654756] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.654782] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.655051] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.656329] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.656451] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.656550] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.656791] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.657834] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    0.659148] Initialise system trusted keyrings
+[    0.659218] Key type blacklist registered
+[    0.659354] workingset: timestamp_bits=44 max_order=20 bucket_order=0
+[    0.664362] zbud: loaded
+[    0.665723] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.667543] integrity: Platform Keyring initialized
+[    0.710653] xor: measuring software checksum speed
+[    0.715319]    8regs           :  2117 MB/sec
+[    0.719989]    32regs          :  2119 MB/sec
+[    0.724981]    arm64_neon      :  1977 MB/sec
+[    0.724992] xor: using function: 32regs (2119 MB/sec)
+[    0.725005] async_tx: api initialized (async)
+[    0.725018] Key type asymmetric registered
+[    0.725028] Asymmetric key parser 'x509' registered
+[    0.726063] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    0.726119] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    0.726245] io scheduler mq-deadline registered
+[    0.726259] io scheduler kyber registered
+[    0.726404] io scheduler bfq registered
+[    0.731899] Serial: 8250/16550 driver, 6 ports, IRQ sharing disabled
+[    0.734594] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.738309] loop: module loaded
+[    0.740068] usbcore: registered new interface driver usb-storage
+[    0.740395] mousedev: PS/2 mouse device common for all mice
+[    0.741213] sun6i-rtc 7000000.rtc: registered as rtc0
+[    0.741245] sun6i-rtc 7000000.rtc: setting system clock to 1970-01-02T00:00:08 UTC (86408)
+[    0.741347] sun6i-rtc 7000000.rtc: RTC enabled
+[    0.741530] i2c_dev: i2c /dev entries driver
+[    0.741704] mv64xxx_i2c 7081400.i2c: can't get pinctrl, bus recovery not supported
+[    0.742188] axp20x-i2c 0-0036: AXP20x variant AXP313a found
+[    0.742338] axp20x-regulator axp20x-regulator: DCDC frequency on AXP313a is fixed to 3 MHz.
+[    0.742355] axp20x-regulator axp20x-regulator: Error setting dcdc frequency: -22
+[    0.752488] axp20x-i2c 0-0036: AXP20X driver loaded
+[    0.752962] sunxi-wdt 30090a0.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.753941] sdhci: Secure Digital Host Controller Interface driver
+[    0.753954] sdhci: Copyright(c) Pierre Ossman
+[    0.753984] Synopsys Designware Multimedia Card Interface Driver
+[    0.754306] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.754652] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.754859] SMCCC: SOC_ID: ID = jep106:091e:1823 Revision = 0x00000002
+[    0.755096] hid: raw HID events driver (C) Jiri Kosina
+[    0.755177] usbcore: registered new interface driver usbhid
+[    0.755190] usbhid: USB HID core driver
+[    0.756476] NET: Registered PF_INET6 protocol family
+[    0.758243] Segment Routing with IPv6
+[    0.758297] In-situ OAM (IOAM) with IPv6
+[    0.758366] NET: Registered PF_PACKET protocol family
+[    0.758458] 8021q: 802.1Q VLAN Support v1.8
+[    0.758565] 9pnet: Installing 9P2000 support
+[    0.758634] Key type dns_resolver registered
+[    0.759019] registered taskstats version 1
+[    0.759051] Loading compiled-in X.509 certificates
+[    0.762444] Loaded X.509 cert 'Build time autogenerated kernel key: f790f443e684d86f2cca28f81d9b6d1e993b13cb'
+[    0.764617] zswap: loaded using pool zstd/z3fold
+[    0.764944] Key type .fscrypt registered
+[    0.764957] Key type fscrypt-provisioning registered
+[    0.765911] Btrfs loaded, crc32c=crc32c-generic, zoned=yes, fsverity=no
+[    0.766142] Key type encrypted registered
+[    0.766163] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.766192] ima: No TPM chip found, activating TPM-bypass!
+[    0.766220] ima: Allocated hash algorithm: sha1
+[    0.766255] ima: No architecture policies found
+[    0.766307] evm: Initialising EVM extended attributes:
+[    0.766318] evm: security.selinux
+[    0.766327] evm: security.SMACK64
+[    0.766336] evm: security.SMACK64EXEC
+[    0.766344] evm: security.SMACK64TRANSMUTE
+[    0.766352] evm: security.SMACK64MMAP
+[    0.766360] evm: security.apparmor
+[    0.766368] evm: security.ima
+[    0.766376] evm: security.capability
+[    0.766384] evm: HMAC attrs: 0x1
+[    0.787116] sun50i-h616-pinctrl 300b000.pinctrl: initialized sunXi PIO driver
+[    0.787620] sun50i-h616-r-pinctrl 7022000.pinctrl: initialized sunXi PIO driver
+[    0.787859] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-ph not found, using dummy regulator
+[    0.788387] printk: console [ttyS0] disabled
+[    0.788471] 5000000.serial: ttyS0 at MMIO 0x5000000 (irq = 284, base_baud = 1500000) is a 16550A
+[    2.102551] printk: console [ttyS0] enabled
+[    2.107364] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pc not found, using dummy regulator
+[    2.116276] sun6i-spi 5010000.spi: Failed to request TX DMA channel
+[    2.122555] sun6i-spi 5010000.spi: Failed to request RX DMA channel
+[    2.129383] spi-nor spi0.0: unrecognized JEDEC id bytes: 5e 40 18 5e 40 18
+[    2.136594] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pg not found, using dummy regulator
+[    2.146146] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pf not found, using dummy regulator
+[    2.147186] sunxi-mmc 4021000.mmc: allocated mmc-pwrseq
+[    2.147303] ALSA device list:
+[    2.147310]   No soundcards found.
+[    2.155856] sunxi-mmc 4020000.mmc: Got CD GPIO
+[    2.196658] sunxi-mmc 4020000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
+[    2.241662] mmc1: host does not support reading read-only switch, assuming write-enable
+[    2.253075] mmc1: new high speed SDHC card at address aaaa
+[    2.259191] mmcblk1: mmc1:aaaa SL16G 14.8 GiB 
+[    2.265499]  mmcblk1: p1 p2
+[    2.392551] sunxi-mmc 4021000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
+[    2.401576] md: Waiting for all devices to be available before autodetect
+[    2.408376] md: If you don't use raid, use raid=noautodetect
+[    2.414040] md: Autodetecting RAID arrays.
+[    2.418141] md: autorun ...
+[    2.418487] mmc0: new high speed SDIO card at address 8800
+[    2.420942] md: ... autorun DONE.
+[    2.423404] EXT4-fs (mmcblk1p2): INFO: recovery required on readonly filesystem
+[    2.437076] EXT4-fs (mmcblk1p2): write access will be enabled during recovery
+[    2.519978] EXT4-fs (mmcblk1p2): orphan cleanup on readonly fs
+[    2.525909] EXT4-fs (mmcblk1p2): recovery complete
+[    2.540495] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    2.549085] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    2.555971] devtmpfs: mounted
+[    2.559993] Freeing unused kernel memory: 2688K
+[    2.564620] Run /sbin/init as init process
+[    2.978687] udevd[210]: starting version 3.2.12
+[    5.015997] random: crng init done
+[    5.044518] udevd[211]: starting eudev-3.2.12
+[    5.251808] EXT4-fs (mmcblk1p2): re-mounted. Quota mode: none.
+Fri Mar  9 12:34:56 UTC 2018
+INIT: Entering runlevel: 5
+Configuring network interfaces... ip: SIOCGIFFLAGS: No such device
+Starting syslogd/klogd: done
+
+Poky (Yocto Project Reference Distro) 4.3+snapshot-7ffa4d4044b9288eefa44fcc80c246a4def2435b orange-pi-zero3 /dev/ttyS0
+
+orange-pi-zero3 login: 
