@@ -171,3 +171,6 @@ Next, can I put my kernel into their image to see if I get x11? And vice versa?
 * Power management: u-boot/arch/arm/mach-sunxi/pmic_bus.c
 * Sound
 * Is GPIO there?
+
+I notice that in orangepi-build the modules for NEXT are: uwe5622_bsp_sdio sprdwl_ng sprdbt_tty
+
