@@ -146,8 +146,7 @@ See OrangePiZero3-poky-their-kernel.txt
 
 ## Building Poky
 
-If I add back the default poky linux-mainline (with some of my changes) then I
-get this:
+If I add back the default poky linux-mainline (with my patches) then I get this:
 
 See OrangePiZero3-poky.txt
 
