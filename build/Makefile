@@ -5,7 +5,7 @@ build:
 	bitbake core-image-x11
 
 clean:
-	bitbake -c clean linux-mainline
+	bitbake -c clean linux-mainline && bitbake -c cleansstate linux-mainline
 
 me:
 	# rm workspace/sources/u-boot; ln -s u-boot.me workspace/sources/u-boot
