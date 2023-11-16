@@ -55,7 +55,7 @@ Working FDT set to 49ff5000
 Starting kernel ...
 
 [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
-[    0.000000] Linux version 6.1.31 (oe-user@oe-host) (aarch64-poky-linux-gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41.0.20230926) #1 SMP Thu Nov 16 09:59:32 UTC 2023
+[    0.000000] Linux version 6.1.31 (oe-user@oe-host) (aarch64-poky-linux-gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41.0.20230926) #1 SMP Thu Nov 16 12:22:02 UTC 2023
 [    0.000000] Machine model: OrangePi Zero3
 [    0.000000] NUMA: No NUMA configuration found
 [    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x000000013fffffff]
@@ -93,7 +93,7 @@ Starting kernel ...
 [    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
 [    0.000000] software IO TLB: area num 4.
 [    0.000000] software IO TLB: mapped [mem 0x00000000f4000000-0x00000000f8000000] (64MB)
-[    0.000000] Memory: 3891288K/4194304K available (13888K kernel code, 1452K rwdata, 3700K rodata, 2688K init, 501K bss, 171944K reserved, 131072K cma-reserved)
+[    0.000000] Memory: 3891224K/4194304K available (13952K kernel code, 1462K rwdata, 3732K rodata, 2688K init, 499K bss, 172008K reserved, 131072K cma-reserved)
 [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
 [    0.000000] rcu: Hierarchical RCU implementation.
 [    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
@@ -106,361 +106,385 @@ Starting kernel ...
 [    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
 [    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
-[    0.000000] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000001] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
 [    0.000478] Console: colour dummy device 80x25
-[    0.000807] printk: console [tty1] enabled
-[    0.000896] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
-[    0.000919] pid_max: default: 32768 minimum: 301
-[    0.000994] LSM: Security Framework initializing
-[    0.001030] Yama: becoming mindful.
-[    0.001130] AppArmor: AppArmor initialized
-[    0.001226] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
-[    0.001260] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
-[    0.002271] cacheinfo: Unable to detect cache hierarchy for CPU 0
-[    0.002850] cblist_init_generic: Setting adjustable number of callback queues.
-[    0.002870] cblist_init_generic: Setting shift to 2 and lim to 1.
-[    0.003037] rcu: Hierarchical SRCU implementation.
-[    0.003049] rcu: 	Max phase no-delay instances is 1000.
-[    0.004159] smp: Bringing up secondary CPUs ...
-[    0.004653] Detected VIPT I-cache on CPU1
-[    0.004726] cacheinfo: Unable to detect cache hierarchy for CPU 1
-[    0.004761] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
-[    0.005245] Detected VIPT I-cache on CPU2
-[    0.005300] cacheinfo: Unable to detect cache hierarchy for CPU 2
-[    0.005318] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
-[    0.005766] Detected VIPT I-cache on CPU3
-[    0.005822] cacheinfo: Unable to detect cache hierarchy for CPU 3
-[    0.005840] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
-[    0.005900] smp: Brought up 1 node, 4 CPUs
-[    0.005966] SMP: Total of 4 processors activated.
-[    0.005977] CPU features: detected: 32-bit EL0 Support
-[    0.005988] CPU features: detected: CRC32 instructions
-[    0.006058] CPU: All CPU(s) started at EL2
-[    0.006068] alternatives: applying system-wide alternatives
-[    0.008507] devtmpfs: initialized
-[    0.013764] Registered cp15_barrier emulation handler
-[    0.013784] Registered setend emulation handler
-[    0.013936] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    0.013965] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
-[    0.018898] pinctrl core: initialized pinctrl subsystem
-[    0.020162] NET: Registered PF_NETLINK/PF_ROUTE protocol family
-[    0.021190] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
-[    0.021447] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
-[    0.021630] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
-[    0.021678] audit: initializing netlink subsys (disabled)
-[    0.021797] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
-[    0.022136] thermal_sys: Registered thermal governor 'fair_share'
-[    0.022141] thermal_sys: Registered thermal governor 'bang_bang'
-[    0.022153] thermal_sys: Registered thermal governor 'step_wise'
-[    0.022164] thermal_sys: Registered thermal governor 'user_space'
-[    0.022206] cpuidle: using governor menu
-[    0.022332] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
-[    0.022416] ASID allocator initialised with 65536 entries
-[    0.022566] Serial: AMBA PL011 UART driver
-[    0.026736] platform 3001000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
-[    0.030773] platform 6000000.hdmi: Fixed dependency cycle(s) with /soc/tcon-top@6510000
-[    0.031227] platform 6510000.tcon-top: Fixed dependency cycle(s) with /soc/lcd-controller@6515000
-[    0.031255] platform 6510000.tcon-top: Fixed dependency cycle(s) with /soc/bus@1000000/mixer@100000
-[    0.031927] platform 7010000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
-[    0.033180] platform 6000000.hdmi: Fixed dependency cycle(s) with /connector
-[    0.034671] KASLR disabled due to lack of seed
-[    0.040722] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
-[    0.040737] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
-[    0.040750] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
-[    0.040761] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
-[    0.040773] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
-[    0.040783] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
-[    0.040795] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
-[    0.040805] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
-[    0.041504] cryptd: max_cpu_qlen set to 1000
-[    0.108108] raid6: neonx8   gen()  1899 MB/s
-[    0.176173] raid6: neonx4   gen()  1865 MB/s
-[    0.244225] raid6: neonx2   gen()  1784 MB/s
-[    0.312294] raid6: neonx1   gen()  1527 MB/s
-[    0.380358] raid6: int64x8  gen()  1189 MB/s
-[    0.448408] raid6: int64x4  gen()  1319 MB/s
-[    0.516476] raid6: int64x2  gen()  1177 MB/s
-[    0.584533] raid6: int64x1  gen()   870 MB/s
-[    0.584545] raid6: using algorithm neonx8 gen() 1899 MB/s
-[    0.652586] raid6: .... xor() 1392 MB/s, rmw enabled
-[    0.652598] raid6: using neon recovery algorithm
-[    0.653862] iommu: Default domain type: Translated 
-[    0.653875] iommu: DMA domain TLB invalidation policy: strict mode 
-[    0.654135] SCSI subsystem initialized
-[    0.654323] usbcore: registered new interface driver usbfs
-[    0.654372] usbcore: registered new interface driver hub
-[    0.654408] usbcore: registered new device driver usb
-[    0.654695] pps_core: LinuxPPS API ver. 1 registered
-[    0.654707] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-[    0.654731] PTP clock support registered
-[    0.655019] ARM FF-A: FFA_VERSION returned not supported
-[    0.655314] Advanced Linux Sound Architecture Driver Initialized.
-[    0.655922] NetLabel: Initializing
-[    0.655933] NetLabel:  domain hash size = 128
-[    0.655943] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
-[    0.656010] NetLabel:  unlabeled traffic allowed by default
-[    0.656021] mctp: management component transport protocol core
-[    0.656032] NET: Registered PF_MCTP protocol family
-[    0.656342] clocksource: Switched to clocksource arch_sys_counter
-[    0.656555] VFS: Disk quotas dquot_6.6.0
-[    0.656605] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    0.657126] AppArmor: AppArmor Filesystem Enabled
-[    0.663573] NET: Registered PF_INET protocol family
-[    0.663809] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
-[    0.667138] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
-[    0.667197] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
-[    0.667223] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
-[    0.667496] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
-[    0.668757] TCP: Hash tables configured (established 32768 bind 32768)
-[    0.668882] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
-[    0.668982] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
-[    0.669222] NET: Registered PF_UNIX/PF_LOCAL protocol family
-[    0.670382] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
-[    0.671957] Initialise system trusted keyrings
-[    0.672047] Key type blacklist registered
-[    0.672181] workingset: timestamp_bits=44 max_order=20 bucket_order=0
-[    0.677525] zbud: loaded
-[    0.678944] squashfs: version 4.0 (2009/01/31) Phillip Lougher
-[    0.680876] integrity: Platform Keyring initialized
-[    0.722228] xor: measuring software checksum speed
-[    0.726893]    8regs           :  2117 MB/sec
-[    0.731557]    32regs          :  2119 MB/sec
-[    0.736554]    arm64_neon      :  1977 MB/sec
-[    0.736566] xor: using function: 32regs (2119 MB/sec)
-[    0.736581] async_tx: api initialized (async)
-[    0.736594] Key type asymmetric registered
-[    0.736605] Asymmetric key parser 'x509' registered
-[    0.737672] alg: self-tests for CTR-KDF (hmac(sha256)) passed
-[    0.737727] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
-[    0.737851] io scheduler mq-deadline registered
-[    0.737865] io scheduler kyber registered
-[    0.738016] io scheduler bfq registered
-[    0.746131] Serial: 8250/16550 driver, 6 ports, IRQ sharing disabled
-[    0.748377] misc dump reg init
-[    0.751354] cacheinfo: Unable to detect cache hierarchy for CPU 0
-[    0.755202] loop: module loaded
-[    0.757908] usbcore: registered new interface driver usb-storage
-[    0.758346] mousedev: PS/2 mouse device common for all mice
-[    0.759369] sun6i-rtc 7000000.rtc: registered as rtc0
-[    0.759400] sun6i-rtc 7000000.rtc: setting system clock to 1970-01-02T00:00:08 UTC (86408)
-[    0.759503] sun6i-rtc 7000000.rtc: RTC enabled
-[    0.759711] i2c_dev: i2c /dev entries driver
-[    0.759939] mv64xxx_i2c 7081400.i2c: can't get pinctrl, bus recovery not supported
-[    0.760453] axp20x-i2c 0-0036: AXP20x variant AXP313a found
-[    0.760627] axp20x-regulator axp20x-regulator: DCDC frequency on AXP313a is fixed to 3 MHz.
-[    0.760645] axp20x-regulator axp20x-regulator: Error setting dcdc frequency: -22
-[    0.770782] axp20x-i2c 0-0036: AXP20X driver loaded
-[    0.771465] sunxi-wdt 30090a0.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
-[    0.772595] sdhci: Secure Digital Host Controller Interface driver
-[    0.772608] sdhci: Copyright(c) Pierre Ossman
-[    0.772638] Synopsys Designware Multimedia Card Interface Driver
-[    0.773265] sdhci-pltfm: SDHCI platform and OF driver helper
-[    0.773642] ledtrig-cpu: registered to indicate activity on CPUs
-[    0.773911] SMCCC: SOC_ID: ID = jep106:091e:1823 Revision = 0x00000002
-[    0.774345] hid: raw HID events driver (C) Jiri Kosina
-[    0.774427] usbcore: registered new interface driver usbhid
-[    0.774440] usbhid: USB HID core driver
-[    0.783442] NET: Registered PF_INET6 protocol family
-[    0.785250] Segment Routing with IPv6
-[    0.785302] In-situ OAM (IOAM) with IPv6
-[    0.785371] NET: Registered PF_PACKET protocol family
-[    0.785457] 8021q: 802.1Q VLAN Support v1.8
-[    0.785568] 9pnet: Installing 9P2000 support
-[    0.785642] Key type dns_resolver registered
-[    0.786019] registered taskstats version 1
-[    0.786051] Loading compiled-in X.509 certificates
-[    0.789409] Loaded X.509 cert 'Build time autogenerated kernel key: 30c9dca761ddd37500ded31f04235730dcb5ce03'
-[    0.791572] zswap: loaded using pool zstd/z3fold
-[    0.791923] Key type .fscrypt registered
-[    0.791935] Key type fscrypt-provisioning registered
-[    0.792933] Btrfs loaded, crc32c=crc32c-generic, zoned=yes, fsverity=no
-[    0.793150] Key type encrypted registered
-[    0.793170] AppArmor: AppArmor sha1 policy hashing enabled
-[    0.793200] ima: No TPM chip found, activating TPM-bypass!
-[    0.793229] ima: Allocated hash algorithm: sha1
-[    0.793266] ima: No architecture policies found
-[    0.793313] evm: Initialising EVM extended attributes:
-[    0.793324] evm: security.selinux
-[    0.793333] evm: security.SMACK64
-[    0.793342] evm: security.SMACK64EXEC
-[    0.793351] evm: security.SMACK64TRANSMUTE
-[    0.793359] evm: security.SMACK64MMAP
-[    0.793368] evm: security.apparmor
-[    0.793377] evm: security.ima
-[    0.793385] evm: security.capability
-[    0.793393] evm: HMAC attrs: 0x1
-[    0.816543] sun50i-h616-pinctrl 300b000.pinctrl: initialized sunXi PIO driver
-[    0.817070] sun50i-h616-r-pinctrl 7022000.pinctrl: initialized sunXi PIO driver
-[    0.817313] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-ph not found, using dummy regulator
-[    0.817767] printk: console [ttyS0] disabled
-[    0.817844] 5000000.serial: ttyS0 at MMIO 0x5000000 (irq = 284, base_baud = 1500000) is a 16550A
-[    2.167484] printk: console [ttyS0] enabled
-[    2.172483] debugfs: Directory '1100000.mixer' with parent 'regmap' already present!
-[    2.180259] debugfs: Directory '1100000.mixer' with parent 'regmap' already present!
-[    2.203689] sun4i-drm display-engine: bound 1100000.mixer (ops 0xffff800008e860c8)
-[    2.211421] sun4i-drm display-engine: bound 6510000.tcon-top (ops 0xffff800008e8a8a0)
-[    2.219514] sun4i-drm display-engine: bound 6515000.lcd-controller (ops 0xffff800008e830a0)
-[    2.227930] sun8i-dw-hdmi 6000000.hdmi: supply hvcc not found, using dummy regulator
-[    2.235902] sun8i-dw-hdmi 6000000.hdmi: Detected HDMI TX controller v2.12a with HDCP (DWC HDMI 2.0 TX PHY)
-[    2.245989] sun8i-dw-hdmi 6000000.hdmi: registered DesignWare HDMI I2C bus driver
-[    2.253879] sun4i-drm display-engine: bound 6000000.hdmi (ops 0xffff800008e85188)
-[    2.261763] [drm] Initialized sun4i-drm 1.0.0 20150629 for display-engine on minor 0
-[    2.528531] Console: switching to colour frame buffer device 240x67
-[    2.635154] sun4i-drm display-engine: [drm] fb0: sun4i-drmdrmfb frame buffer device
-[    2.643914] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pc not found, using dummy regulator
-[    2.657637] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pg not found, using dummy regulator
-[    2.667824] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pf not found, using dummy regulator
-[    2.667937] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pc not found, using dummy regulator
-[    2.668754] sunxi-mmc 4021000.mmc: allocated mmc-pwrseq
-[    2.691723] sunxi-mmc 4020000.mmc: Got CD GPIO
-[    2.694462] ehci-platform 5200000.usb: EHCI Host Controller
-[    2.695071] usb_phy_generic usb_phy_generic.4.auto: supply vcc not found, using dummy regulator
-[    2.695159] usb_phy_generic usb_phy_generic.4.auto: dummy supplies not allowed for exclusive requests
-[    2.696742] ehci-platform 5310000.usb: EHCI Host Controller
-[    2.702325] ehci-platform 5200000.usb: new USB bus registered, assigned bus number 1
-[    2.702785] ehci-platform 5310000.usb: new USB bus registered, assigned bus number 2
-[    2.703354] ehci-platform 5200000.usb: irq 291, io mem 0x05200000
-[    2.703651] ehci-platform 5310000.usb: irq 293, io mem 0x05310000
-[    2.704516] ehci-platform 5311000.usb: EHCI Host Controller
-[    2.704614] ohci-platform 5200400.usb: Generic Platform OHCI controller
-[    2.704629] ohci-platform 5200400.usb: new USB bus registered, assigned bus number 3
-[    2.704702] ohci-platform 5200400.usb: irq 295, io mem 0x05200400
-[    2.704871] ohci-platform 5310400.usb: Generic Platform OHCI controller
-[    2.704887] ohci-platform 5310400.usb: new USB bus registered, assigned bus number 4
-[    2.704950] ohci-platform 5310400.usb: irq 296, io mem 0x05310400
-[    2.705438] ohci-platform 5311400.usb: Generic Platform OHCI controller
-[    2.705453] ohci-platform 5311400.usb: new USB bus registered, assigned bus number 5
-[    2.705518] ohci-platform 5311400.usb: irq 297, io mem 0x05311400
-[    2.713647] ALSA device list:
-[    2.716356] ehci-platform 5200000.usb: USB 2.0 started, EHCI 1.00
-[    2.716624] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
-[    2.716635] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    2.716642] usb usb1: Product: EHCI Host Controller
-[    2.716647] usb usb1: Manufacturer: Linux 6.1.31 ehci_hcd
-[    2.716653] usb usb1: SerialNumber: 5200000.usb
-[    2.717147] hub 1-0:1.0: USB hub found
-[    2.717183] hub 1-0:1.0: 1 port detected
-[    2.722318] sunxi-mmc 4020000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
-[    2.722648] ehci-platform 5311000.usb: new USB bus registered, assigned bus number 6
-[    2.722978]   No soundcards found.
-[    2.723380] ehci-platform 5311000.usb: irq 294, io mem 0x05311000
-[    2.732344] ehci-platform 5310000.usb: USB 2.0 started, EHCI 1.00
-[    2.752343] ehci-platform 5311000.usb: USB 2.0 started, EHCI 1.00
-[    2.752903] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
-[    2.784359] mmc1: host does not support reading read-only switch, assuming write-enable
-[    2.786706] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    2.790271] mmc1: new high speed SDHC card at address aaaa
-[    2.793960] usb usb2: Product: EHCI Host Controller
-[    2.794954] mmcblk1: mmc1:aaaa SL16G 14.8 GiB 
-[    2.802231] usb usb2: Manufacturer: Linux 6.1.31 ehci_hcd
-[    2.802238] usb usb2: SerialNumber: 5310000.usb
-[    2.804388]  mmcblk1: p1 p2
-[    2.809165] hub 2-0:1.0: USB hub found
-[    2.900359] sunxi-mmc 4021000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
-[    2.913524] hub 2-0:1.0: 1 port detected
-[    3.172921] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
-[    3.175128] mmc0: new high speed SDIO card at address 8800
-[    3.189766] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    3.244136] usb usb5: Product: Generic Platform OHCI controller
-[    3.266684] usb usb5: Manufacturer: Linux 6.1.31 ohci_hcd
-[    3.288556] usb usb5: SerialNumber: 5311400.usb
-[    3.309752] hub 5-0:1.0: USB hub found
-[    3.329600] hub 5-0:1.0: 1 port detected
-[    3.349844] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
-[    3.374171] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    3.397312] usb usb4: Product: Generic Platform OHCI controller
-[    3.419022] usb usb4: Manufacturer: Linux 6.1.31 ohci_hcd
-[    3.440068] usb usb4: SerialNumber: 5310400.usb
-[    3.460410] hub 4-0:1.0: USB hub found
-[    3.479458] hub 4-0:1.0: 1 port detected
-[    3.498888] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
-[    3.522402] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    3.545041] usb usb3: Product: Generic Platform OHCI controller
-[    3.566551] usb usb3: Manufacturer: Linux 6.1.31 ohci_hcd
-[    3.587697] usb usb3: SerialNumber: 5200400.usb
-[    3.608092] hub 3-0:1.0: USB hub found
-[    3.627405] hub 3-0:1.0: 1 port detected
-[    3.647190] usb usb6: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
-[    3.671065] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    3.693862] usb usb6: Product: EHCI Host Controller
-[    3.714067] usb usb6: Manufacturer: Linux 6.1.31 ehci_hcd
-[    3.734770] usb usb6: SerialNumber: 5311000.usb
-[    3.755052] hub 6-0:1.0: USB hub found
-[    3.774144] hub 6-0:1.0: 1 port detected
-[    3.793926] md: Waiting for all devices to be available before autodetect
-[    3.816362] md: If you don't use raid, use raid=noautodetect
-[    3.837703] md: Autodetecting RAID arrays.
-[    3.857419] md: autorun ...
-[    3.875679] md: ... autorun DONE.
-[    3.930141] EXT4-fs (mmcblk1p2): orphan cleanup on readonly fs
-[    3.952077] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: none.
-[    3.976495] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
-[    4.000163] devtmpfs: mounted
-[    4.020016] Freeing unused kernel memory: 2688K
-[    4.040510] Run /sbin/init as init process
-[    4.797122] udevd[239]: starting version 3.2.12
-[    6.760341] random: crng init done
-[    6.795819] udevd[240]: starting eudev-3.2.12
-[    7.181030] EXT4-fs (mmcblk1p2): re-mounted. Quota mode: none.
-[    7.302968] cfg80211: Loading compiled-in X.509 certificates for regulatory database
-[    7.312087] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
-[    7.352288] WCN: marlin_init entry!
-[    7.356362] WCN: wcn config bt wake host
-[    7.360534] WCN_ERR: dts node for bt_wake not found
-[    7.360538] WCN: marlin2 parse_dt some para not config
-[    7.370574] sdiohal:sdiohal_parse_dt adma_tx:1, adma_rx:1, pwrseq:0, irq type:data, gpio_num:0, blksize:840
-[    7.384439] sdiohal:sdiohal_init ok
-[    7.389297] WCN: marlin_probe ok!
-[    7.430537] WCN: start_marlin [MARLIN_WIFI]
-[    7.434769] WCN: marlin power state:0, subsys: [MARLIN_WIFI] power 1
-[    7.441129] WCN: the first power on start
-[    7.552343] WCN: marlin chip en dummy pull up -- need manually set GPIO 
-[    7.584342] sdiohal:sdiohal_scan_card
-[    7.588139] sdiohal:sdiohal_probe: func->class=0, vendor=0x0000, device=0x0000, func_num=0x0001, clock=50000000
-[    7.598506] WCN: marlin_get_wcn_chipid: chipid: 0x2355b001
-[    7.604007] WCN: marlin_scan_finish!
-[    7.607586] sdiohal:probe ok
-[    7.610545] sdiohal:scan end!
-[    7.613525] WCN: then marlin start to download
-[    7.617992] WCN: marlin_request_firmware from /lib/firmware/wcnmodem.bin start!
-[    9.137224] WCN: combin_img 0 marlin_firmware_write finish and successful
-[    9.144232] WCN: marlin_start_run read reset reg val:0x1
-[    9.149552] WCN: after do marlin_start_run reset reg val:0x0
-[    9.155416] WCN: s_marlin_bootup_time=9155415797
-[    9.162035] WCN: clock mode: TSX
-[    9.170092] WCN: marlin_write_cali_data sync init_state:0x0
-[    9.200543] WCN: marlin_write_cali_data sync init_state:0xf0f0f0f1
-[    9.206728] WCN: sdio_config bt_wake_host trigger:[high]
-[    9.212041] WCN: sdio_config irq:[inband]
-[    9.216053] WCN: sdio_config wake_host_level_duration_time:[20ms]
-[    9.222144] WCN: sdio_config wake_host_data_separation:[bt/wifi reuse]
-[    9.228669] WCN: marlin_send_sdio_config_to_cp sdio_config:0x80f01 (enable config)
-[    9.236648] WCN: marlin_write_cali_data finish
-[    9.241305] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
-[    9.272543] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
-[    9.304545] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
-[    9.336545] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
-[    9.368547] WCN: check_cp_ready sync val:0xf0f0f0ff, prj_type val:0x0
-[    9.374992] sdiohal:sdiohal_runtime_get entry
-[    9.379542] WCN: get_cp2_version entry!
-[    9.418658] WCN: WCND at cmd read:WCN_VER:Platform Version:MARLIN3_19B_W21.05.3~Project Version:sc2355_marlin3_lite_ott~12-15-2021 11:26:33~
-[    9.431271] WCN: switch_cp2_log - close entry!
-[    9.436814] WCN: WCND at cmd read:OK
-[    9.440420] WCN: then marlin download finished and run ok
-[    9.445826] WCN: start_loopcheck
-[    9.465115] WCN: get_board_ant_num [one_ant]
-[    9.469437] wifi ini path = /lib/firmware/wifi_2355b001_1ant.ini
-[    9.499625] sprdwl:sprdwl_get_fw_info length mismatch: len_count=83, r_len=89
-[    9.506773] sprdwl:sprdwl_get_fw_info, drv_version=1, fw_version=2, compat_ver=0
-[    9.514168] sprdwl:chip_model:0x2355, chip_ver:0x0
-[    9.518962] sprdwl:fw_ver:0, fw_std:0x7f, fw_capa:0x120f7f
-[    9.524448] sprdwl:mac_addr:e0:51:d8:67:98:ae
-[    9.528810] sprdwl:credit_capa:TX_WITH_CREDIT
-[    9.533169] sprdwl:ott support:0
-[    9.568639] unisoc_wifi unisoc_wifi wlan0: mixed HW and IP checksum settings.
+[    0.000824] printk: console [tty1] enabled
+[    0.000911] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.000934] pid_max: default: 32768 minimum: 301
+[    0.001011] LSM: Security Framework initializing
+[    0.001046] Yama: becoming mindful.
+[    0.001145] AppArmor: AppArmor initialized
+[    0.001240] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.001274] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.002281] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.002864] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.002883] cblist_init_generic: Setting shift to 2 and lim to 1.
+[    0.003052] rcu: Hierarchical SRCU implementation.
+[    0.003064] rcu: 	Max phase no-delay instances is 1000.
+[    0.004174] smp: Bringing up secondary CPUs ...
+[    0.004650] Detected VIPT I-cache on CPU1
+[    0.004724] cacheinfo: Unable to detect cache hierarchy for CPU 1
+[    0.004758] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.005259] Detected VIPT I-cache on CPU2
+[    0.005317] cacheinfo: Unable to detect cache hierarchy for CPU 2
+[    0.005334] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.005785] Detected VIPT I-cache on CPU3
+[    0.005841] cacheinfo: Unable to detect cache hierarchy for CPU 3
+[    0.005859] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.005918] smp: Brought up 1 node, 4 CPUs
+[    0.005987] SMP: Total of 4 processors activated.
+[    0.005998] CPU features: detected: 32-bit EL0 Support
+[    0.006009] CPU features: detected: CRC32 instructions
+[    0.006078] CPU: All CPU(s) started at EL2
+[    0.006088] alternatives: applying system-wide alternatives
+[    0.008530] devtmpfs: initialized
+[    0.013598] Registered cp15_barrier emulation handler
+[    0.013619] Registered setend emulation handler
+[    0.013768] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.013797] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.018732] pinctrl core: initialized pinctrl subsystem
+[    0.019980] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.021002] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.021242] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.021439] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.021486] audit: initializing netlink subsys (disabled)
+[    0.021607] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
+[    0.021935] thermal_sys: Registered thermal governor 'fair_share'
+[    0.021941] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.021953] thermal_sys: Registered thermal governor 'step_wise'
+[    0.021963] thermal_sys: Registered thermal governor 'user_space'
+[    0.022005] cpuidle: using governor menu
+[    0.022133] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.022218] ASID allocator initialised with 65536 entries
+[    0.022365] Serial: AMBA PL011 UART driver
+[    0.026537] platform 3001000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
+[    0.030498] platform 6000000.hdmi: Fixed dependency cycle(s) with /soc/tcon-top@6510000
+[    0.030946] platform 6510000.tcon-top: Fixed dependency cycle(s) with /soc/lcd-controller@6515000
+[    0.030974] platform 6510000.tcon-top: Fixed dependency cycle(s) with /soc/bus@1000000/mixer@100000
+[    0.031636] platform 7010000.clock: Fixed dependency cycle(s) with /soc/rtc@7000000
+[    0.032870] platform 6000000.hdmi: Fixed dependency cycle(s) with /connector
+[    0.034343] KASLR disabled due to lack of seed
+[    0.040417] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.040432] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.040445] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.040456] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.040468] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.040479] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.040490] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.040501] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.041183] cryptd: max_cpu_qlen set to 1000
+[    0.108101] raid6: neonx8   gen()  1895 MB/s
+[    0.176151] raid6: neonx4   gen()  1861 MB/s
+[    0.244213] raid6: neonx2   gen()  1780 MB/s
+[    0.312256] raid6: neonx1   gen()  1519 MB/s
+[    0.380303] raid6: int64x8  gen()  1188 MB/s
+[    0.448371] raid6: int64x4  gen()  1317 MB/s
+[    0.516406] raid6: int64x2  gen()  1177 MB/s
+[    0.584468] raid6: int64x1  gen()   871 MB/s
+[    0.584480] raid6: using algorithm neonx8 gen() 1895 MB/s
+[    0.652512] raid6: .... xor() 1392 MB/s, rmw enabled
+[    0.652524] raid6: using neon recovery algorithm
+[    0.653787] iommu: Default domain type: Translated 
+[    0.653801] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.654076] SCSI subsystem initialized
+[    0.654246] usbcore: registered new interface driver usbfs
+[    0.654287] usbcore: registered new interface driver hub
+[    0.654322] usbcore: registered new device driver usb
+[    0.654604] pps_core: LinuxPPS API ver. 1 registered
+[    0.654617] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.654641] PTP clock support registered
+[    0.654923] ARM FF-A: FFA_VERSION returned not supported
+[    0.655240] Advanced Linux Sound Architecture Driver Initialized.
+[    0.655838] NetLabel: Initializing
+[    0.655849] NetLabel:  domain hash size = 128
+[    0.655859] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.655930] NetLabel:  unlabeled traffic allowed by default
+[    0.655942] mctp: management component transport protocol core
+[    0.655952] NET: Registered PF_MCTP protocol family
+[    0.656267] clocksource: Switched to clocksource arch_sys_counter
+[    0.656463] VFS: Disk quotas dquot_6.6.0
+[    0.656513] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.657039] AppArmor: AppArmor Filesystem Enabled
+[    0.663420] NET: Registered PF_INET protocol family
+[    0.663655] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.666979] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.667042] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.667071] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.667342] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.668629] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.668750] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.668850] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.669086] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.670233] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    0.671791] Initialise system trusted keyrings
+[    0.671852] Key type blacklist registered
+[    0.671983] workingset: timestamp_bits=44 max_order=20 bucket_order=0
+[    0.677059] zbud: loaded
+[    0.678432] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.680328] integrity: Platform Keyring initialized
+[    0.721928] xor: measuring software checksum speed
+[    0.726593]    8regs           :  2117 MB/sec
+[    0.731257]    32regs          :  2119 MB/sec
+[    0.736253]    arm64_neon      :  1977 MB/sec
+[    0.736265] xor: using function: 32regs (2119 MB/sec)
+[    0.736280] async_tx: api initialized (async)
+[    0.736294] Key type asymmetric registered
+[    0.736305] Asymmetric key parser 'x509' registered
+[    0.737368] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    0.737424] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    0.737544] io scheduler mq-deadline registered
+[    0.737558] io scheduler kyber registered
+[    0.737709] io scheduler bfq registered
+[    0.750167] Serial: 8250/16550 driver, 6 ports, IRQ sharing disabled
+[    0.752408] misc dump reg init
+[    0.755380] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.759077] loop: module loaded
+[    0.761896] usbcore: registered new interface driver usb-storage
+[    0.762333] mousedev: PS/2 mouse device common for all mice
+[    0.763344] sun6i-rtc 7000000.rtc: registered as rtc0
+[    0.763374] sun6i-rtc 7000000.rtc: setting system clock to 1970-01-02T00:00:08 UTC (86408)
+[    0.763482] sun6i-rtc 7000000.rtc: RTC enabled
+[    0.763688] i2c_dev: i2c /dev entries driver
+[    0.763914] mv64xxx_i2c 7081400.i2c: can't get pinctrl, bus recovery not supported
+[    0.764464] axp20x-i2c 0-0036: AXP20x variant AXP313a found
+[    0.764632] axp20x-regulator axp20x-regulator: DCDC frequency on AXP313a is fixed to 3 MHz.
+[    0.764649] axp20x-regulator axp20x-regulator: Error setting dcdc frequency: -22
+[    0.774747] axp20x-i2c 0-0036: AXP20X driver loaded
+[    0.775427] sunxi-wdt 30090a0.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.776669] sdhci: Secure Digital Host Controller Interface driver
+[    0.776682] sdhci: Copyright(c) Pierre Ossman
+[    0.776711] Synopsys Designware Multimedia Card Interface Driver
+[    0.777337] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.777716] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.777983] SMCCC: SOC_ID: ID = jep106:091e:1823 Revision = 0x00000002
+[    0.778421] hid: raw HID events driver (C) Jiri Kosina
+[    0.778503] usbcore: registered new interface driver usbhid
+[    0.778516] usbhid: USB HID core driver
+[    0.821410] NET: Registered PF_INET6 protocol family
+[    0.823316] Segment Routing with IPv6
+[    0.823369] In-situ OAM (IOAM) with IPv6
+[    0.823444] NET: Registered PF_PACKET protocol family
+[    0.823534] 8021q: 802.1Q VLAN Support v1.8
+[    0.823641] 9pnet: Installing 9P2000 support
+[    0.823709] Key type dns_resolver registered
+[    0.824088] registered taskstats version 1
+[    0.824119] Loading compiled-in X.509 certificates
+[    0.827549] Loaded X.509 cert 'Build time autogenerated kernel key: 84fd0d19ab00fa02b134f69a35d1f69512885ab1'
+[    0.829712] zswap: loaded using pool zstd/z3fold
+[    0.830070] Key type .fscrypt registered
+[    0.830082] Key type fscrypt-provisioning registered
+[    0.831035] Btrfs loaded, crc32c=crc32c-generic, zoned=yes, fsverity=no
+[    0.831252] Key type encrypted registered
+[    0.831273] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.831303] ima: No TPM chip found, activating TPM-bypass!
+[    0.831347] ima: Allocated hash algorithm: sha1
+[    0.831385] ima: No architecture policies found
+[    0.831433] evm: Initialising EVM extended attributes:
+[    0.831444] evm: security.selinux
+[    0.831453] evm: security.SMACK64
+[    0.831462] evm: security.SMACK64EXEC
+[    0.831471] evm: security.SMACK64TRANSMUTE
+[    0.831480] evm: security.SMACK64MMAP
+[    0.831489] evm: security.apparmor
+[    0.831497] evm: security.ima
+[    0.831506] evm: security.capability
+[    0.831515] evm: HMAC attrs: 0x1
+[    0.854438] sun50i-h616-pinctrl 300b000.pinctrl: initialized sunXi PIO driver
+[    0.854948] sun50i-h616-r-pinctrl 7022000.pinctrl: initialized sunXi PIO driver
+[    0.855188] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-ph not found, using dummy regulator
+[    0.855640] printk: console [ttyS0] disabled
+[    0.855719] 5000000.serial: ttyS0 at MMIO 0x5000000 (irq = 285, base_baud = 1500000) is a 16550A
+[    2.205344] printk: console [ttyS0] enabled
+[    2.210328] debugfs: Directory '1100000.mixer' with parent 'regmap' already present!
+[    2.218108] debugfs: Directory '1100000.mixer' with parent 'regmap' already present!
+[    2.241530] sun4i-drm display-engine: bound 1100000.mixer (ops 0xffff800008e96290)
+[    2.249267] sun4i-drm display-engine: bound 6510000.tcon-top (ops 0xffff800008e9aa68)
+[    2.257359] sun4i-drm display-engine: bound 6515000.lcd-controller (ops 0xffff800008e93268)
+[    2.265778] sun8i-dw-hdmi 6000000.hdmi: supply hvcc not found, using dummy regulator
+[    2.273758] sun8i-dw-hdmi 6000000.hdmi: Detected HDMI TX controller v2.12a with HDCP (DWC HDMI 2.0 TX PHY)
+[    2.283868] sun8i-dw-hdmi 6000000.hdmi: registered DesignWare HDMI I2C bus driver
+[    2.291758] sun4i-drm display-engine: bound 6000000.hdmi (ops 0xffff800008e95350)
+[    2.299628] [drm] Initialized sun4i-drm 1.0.0 20150629 for display-engine on minor 0
+[    2.566371] Console: switching to colour frame buffer device 240x67
+[    2.673004] sun4i-drm display-engine: [drm] fb0: sun4i-drmdrmfb frame buffer device
+[    2.681756] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pc not found, using dummy regulator
+[    2.692368] spi-nor spi0.0: ZB25VQ128A (16384 Kbytes)
+[    2.703191] sun50i-cpufreq-nvmem: will use speed0 CPU OPPs
+[    2.710772] OF: /thermal-zones/gpu-thermal/cooling-maps/map0: could not get #cooling-cells for /soc/gpu@1800000
+[    2.721419] thermal_sys: Add a cooling_device property with at least one device
+[    2.729116] thermal thermal_zone0: binding zone gpu-thermal with cdev cpufreq-cpu0 failed:-2
+[    2.738429] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pg not found, using dummy regulator
+[    2.748562] sun50i-h616-pinctrl 300b000.pinctrl: supply vcc-pf not found, using dummy regulator
+[    2.749684] sunxi-mmc 4021000.mmc: allocated mmc-pwrseq
+[    2.750996] ehci-platform 5200000.usb: EHCI Host Controller
+[    2.751023] ehci-platform 5200000.usb: new USB bus registered, assigned bus number 1
+[    2.751129] ehci-platform 5200000.usb: irq 291, io mem 0x05200000
+[    2.751704] ehci-platform 5310000.usb: EHCI Host Controller
+[    2.751719] ehci-platform 5310000.usb: new USB bus registered, assigned bus number 2
+[    2.751791] ehci-platform 5310000.usb: irq 292, io mem 0x05310000
+[    2.751925] usb_phy_generic usb_phy_generic.4.auto: supply vcc not found, using dummy regulator
+[    2.758309] ehci-platform 5311000.usb: EHCI Host Controller
+[    2.758353] ohci-platform 5200400.usb: Generic Platform OHCI controller
+[    2.758368] ohci-platform 5200400.usb: new USB bus registered, assigned bus number 3
+[    2.758404] ohci-platform 5310400.usb: Generic Platform OHCI controller
+[    2.758419] ohci-platform 5310400.usb: new USB bus registered, assigned bus number 4
+[    2.758450] ohci-platform 5200400.usb: irq 294, io mem 0x05200400
+[    2.758497] ohci-platform 5310400.usb: irq 295, io mem 0x05310400
+[    2.758895] ohci-platform 5311400.usb: Generic Platform OHCI controller
+[    2.758909] ohci-platform 5311400.usb: new USB bus registered, assigned bus number 5
+[    2.758971] ohci-platform 5311400.usb: irq 296, io mem 0x05311400
+[    2.766120] usb_phy_generic usb_phy_generic.4.auto: dummy supplies not allowed for exclusive requests
+[    2.767013] sunxi-mmc 4020000.mmc: Got CD GPIO
+[    2.769181] ehci-platform 5311000.usb: new USB bus registered, assigned bus number 6
+[    2.769186] ehci-platform 5200000.usb: USB 2.0 started, EHCI 1.00
+[    2.769424] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    2.769432] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.769438] usb usb1: Product: EHCI Host Controller
+[    2.769442] usb usb1: Manufacturer: Linux 6.1.31 ehci_hcd
+[    2.769447] usb usb1: SerialNumber: 5200000.usb
+[    2.769915] hub 1-0:1.0: USB hub found
+[    2.777581] ehci-platform 5311000.usb: irq 293, io mem 0x05311000
+[    2.777768] hub 1-0:1.0: 1 port detected
+[    2.784275] ehci-platform 5310000.usb: USB 2.0 started, EHCI 1.00
+[    2.797135] sunxi-mmc 4020000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
+[    2.798511] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    2.799301] ALSA device list:
+[    2.804965] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.804970] ehci-platform 5311000.usb: USB 2.0 started, EHCI 1.00
+[    2.805228]   #0: audiocodec
+[    2.805537] usb usb2: Product: EHCI Host Controller
+[    2.805781]   #1: ahubdam
+[    2.806027] usb usb2: Manufacturer: Linux 6.1.31 ehci_hcd
+[    2.806291]   #2: ahubhdmi
+[    2.806600] usb usb2: SerialNumber: 5310000.usb
+[    2.845770] mmc1: host does not support reading read-only switch, assuming write-enable
+[    2.851641] hub 2-0:1.0: USB hub found
+[    2.860841] mmc1: new high speed SDHC card at address aaaa
+[    2.863929] hub 2-0:1.0: 1 port detected
+[    2.864749] mmcblk1: mmc1:aaaa SL16G 14.8 GiB 
+[    2.871274] usb usb6: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    2.880759]  mmcblk1: p1 p2
+[    2.885157] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.992810] sunxi-mmc 4021000.mmc: initialized, max. request size: 16384 KB, uses new timings mode
+[    2.993900] usb usb6: Product: EHCI Host Controller
+[    3.023416] mmc0: new high speed SDIO card at address 8800
+[    3.024345] usb usb6: Manufacturer: Linux 6.1.31 ehci_hcd
+[    3.364457] usb usb6: SerialNumber: 5311000.usb
+[    3.364774] hub 6-0:1.0: USB hub found
+[    3.396670] hub 6-0:1.0: 1 port detected
+[    3.412679] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    3.432850] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.451863] usb usb4: Product: Generic Platform OHCI controller
+[    3.469462] usb usb4: Manufacturer: Linux 6.1.31 ohci_hcd
+[    3.486502] usb usb4: SerialNumber: 5310400.usb
+[    3.502704] hub 4-0:1.0: USB hub found
+[    3.517708] hub 4-0:1.0: 1 port detected
+[    3.532977] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    3.552420] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.570927] usb usb3: Product: Generic Platform OHCI controller
+[    3.588029] usb usb3: Manufacturer: Linux 6.1.31 ohci_hcd
+[    3.604576] usb usb3: SerialNumber: 5200400.usb
+[    3.620440] hub 3-0:1.0: USB hub found
+[    3.635282] hub 3-0:1.0: 1 port detected
+[    3.650559] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    3.670063] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.688562] usb usb5: Product: Generic Platform OHCI controller
+[    3.705651] usb usb5: Manufacturer: Linux 6.1.31 ohci_hcd
+[    3.722094] usb usb5: SerialNumber: 5311400.usb
+[    3.737872] hub 5-0:1.0: USB hub found
+[    3.752608] hub 5-0:1.0: 1 port detected
+[    3.767849] md: Waiting for all devices to be available before autodetect
+[    3.787048] md: If you don't use raid, use raid=noautodetect
+[    3.805107] md: Autodetecting RAID arrays.
+[    3.821684] md: autorun ...
+[    3.836882] md: ... autorun DONE.
+[    3.890964] EXT4-fs (mmcblk1p2): orphan cleanup on readonly fs
+[    3.918499] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    3.948260] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    3.976851] devtmpfs: mounted
+[    3.994021] Freeing unused kernel memory: 2688K
+[    4.010899] Run /sbin/init as init process
+[    4.751768] udevd[240]: starting version 3.2.12
+[    5.708262] random: crng init done
+[    5.746241] udevd[241]: starting eudev-3.2.12
+[    6.205281] EXT4-fs (mmcblk1p2): re-mounted. Quota mode: none.
+[    6.336124] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    6.344873] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    6.389170] WCN: marlin_init entry!
+[    6.393346] WCN: wcn config bt wake host
+[    6.397549] WCN_ERR: dts node for bt_wake not found
+[    6.397555] WCN: marlin2 parse_dt some para not config
+[    6.407597] sdiohal:sdiohal_parse_dt adma_tx:1, adma_rx:1, pwrseq:0, irq type:data, gpio_num:0, blksize:840
+[    6.423181] sdiohal:sdiohal_init ok
+[    6.427640] WCN: marlin_probe ok!
+[    6.475774] WCN: start_marlin [MARLIN_WIFI]
+[    6.480017] WCN: marlin power state:0, subsys: [MARLIN_WIFI] power 1
+[    6.486392] WCN: the first power on start
+[    6.596291] WCN: marlin chip en dummy pull up -- need manually set GPIO 
+[    6.628278] sdiohal:sdiohal_scan_card
+[    6.632075] sdiohal:sdiohal_probe: func->class=0, vendor=0x0000, device=0x0000, func_num=0x0001, clock=50000000
+[    6.642402] WCN: marlin_get_wcn_chipid: chipid: 0x2355b001
+[    6.647902] WCN: marlin_scan_finish!
+[    6.651484] sdiohal:probe ok
+[    6.654447] sdiohal:scan end!
+[    6.657432] WCN: then marlin start to download
+[    6.661905] WCN: marlin_request_firmware from /lib/firmware/wcnmodem.bin start!
+[    6.990947] WCN: combin_img 0 marlin_firmware_write finish and successful
+[    6.998278] WCN: marlin_start_run read reset reg val:0x1
+[    7.003626] WCN: after do marlin_start_run reset reg val:0x0
+[    7.009646] WCN: s_marlin_bootup_time=7009645389
+[    7.016623] WCN: clock mode: TSX
+[    7.024683] WCN: marlin_write_cali_data sync init_state:0x0
+[    7.056451] WCN: marlin_write_cali_data sync init_state:0xf0f0f0f1
+[    7.062637] WCN: sdio_config bt_wake_host trigger:[high]
+[    7.067952] WCN: sdio_config irq:[inband]
+[    7.071960] WCN: sdio_config wake_host_level_duration_time:[20ms]
+[    7.078052] WCN: sdio_config wake_host_data_separation:[bt/wifi reuse]
+[    7.084573] WCN: marlin_send_sdio_config_to_cp sdio_config:0x80f01 (enable config)
+[    7.092595] WCN: marlin_write_cali_data finish
+[    7.097252] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
+[    7.128440] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
+[    7.160635] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
+[    7.192553] WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0x0
+[    7.224779] WCN: check_cp_ready sync val:0xf0f0f0ff, prj_type val:0x0
+[    7.231259] sdiohal:sdiohal_runtime_get entry
+[    7.236107] WCN: get_cp2_version entry!
+[    7.275189] WCN: WCND at cmd read:WCN_VER:Platform Version:MARLIN3_19B_W21.05.3~Project Version:sc2355_marlin3_lite_ott~12-15-2021 11:26:33~
+[    7.287810] WCN: switch_cp2_log - close entry!
+[    7.293502] WCN: WCND at cmd read:OK
+[    7.297121] WCN: then marlin download finished and run ok
+[    7.302527] WCN: start_loopcheck
+[    7.321883] WCN: get_board_ant_num [one_ant]
+[    7.326197] wifi ini path = /lib/firmware/wifi_2355b001_1ant.ini
+[    7.357714] sprdwl:sprdwl_get_fw_info length mismatch: len_count=83, r_len=89
+[    7.364901] sprdwl:sprdwl_get_fw_info, drv_version=1, fw_version=2, compat_ver=0
+[    7.372323] sprdwl:chip_model:0x2355, chip_ver:0x0
+[    7.377137] sprdwl:fw_ver:0, fw_std:0x7f, fw_capa:0x120f7f
+[    7.382644] sprdwl:mac_addr:e0:51:d8:67:98:ae
+[    7.387027] sprdwl:credit_capa:TX_WITH_CREDIT
+[    7.391403] sprdwl:ott support:0
+[    7.428979] unisoc_wifi unisoc_wifi wlan0: mixed HW and IP checksum settings.
 Fri Mar  9 12:34:56 UTC 2018
 ALSA: Restoring mixer settings...
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:0 use case configuration -2
+No state is present for card audiocodec
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:0 use case configuration -2
+Found hardware: "audiocodec" "" "" "" ""
+Hardware is initialized using a generic method
+No state is present for card audiocodec
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:1 use case configuration -2
+No state is present for card ahubdam
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:1 use case configuration -2
+Found hardware: "ahubdam" "" "" "" ""
+Hardware is initialized using a generic method
+No state is present for card ahubdam
 INIT: Entering runlevel: 5
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:2 use case configuration -2
+No state is present for card ahubhdmi
+alsa-lib /usr/src/debug/alsa-lib/1.2.10-r0/src/ucm/main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:2 use case configuration -2
+Found hardware: "ahubhdmi" "" "" "" ""
+Hardware is initialized using a generic method
+No state is present for card ahubhdmi
 Configuring network interfaces... ip: SIOCGIFFLAGS: No such device
 Starting system message bus: dbus.
 Starting Xserver
@@ -472,7 +496,7 @@ Starting syslogd/klogd: done
 
 X.Org X Server 1.21.1.9
 X Protocol Version 11, Revision 0
-Current Operating System: Linux orange-pi-zero3 6.1.31 #1 SMP Thu Nov 16 09:59:32 UTC 2023 aarch64
+Current Operating System: Linux orange-pi-zero3 6.1.31 #1 SMP Thu Nov 16 12:22:02 UTC 2023 aarch64
 Kernel command line: console=ttyS0,115200 console=tty1 root=PARTUUID=076c4a2a-02 rootwait panic=10
  
 Current version of pixman: 0.42.2
@@ -481,24 +505,23 @@ Current version of pixman: 0.42.2
 Markers: (--) probed, (**) from config file, (==) default setting,
 	(++) from command line, (!!) notice, (II) informational,
 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
-(==) Log file: "/var/log/Xorg.0.log", Time: Fri Mar  9 12:35:00 2018
+(==) Log file: "/var/log/Xorg.0.log", Time: Fri Mar  9 12:34:57 2018
 (==) Using system config directory "/usr/share/X11/xorg.conf.d"
    ...done.
-Starting Telepho[   14.552471] Bluetooth: Core ver 2.22
-ny daemon
-[   14.556311] NET: Registered PF_BLUETOOTH protocol family
-[   14.562590] Bluetooth: HCI device and connection manager initialized
-[   14.568978] Bluetooth: HCI socket layer initialized
-[   14.573881] Bluetooth: L2CAP socket layer initialized
-[   14.578991] Bluetooth: SCO socket layer initialized
+Starting Telephony daemon
+[    9.133478] Bluetooth: Core ver 2.22
+[    9.137186] NET: Registered PF_BLUETOOTH protocol family
+[    9.142513] Bluetooth: HCI device and connection manager initialized
+[    9.148900] Bluetooth: HCI socket layer initialized
+[    9.153798] Bluetooth: L2CAP socket layer initialized
+[    9.158881] Bluetooth: SCO socket layer initialized
 Starting Linux NFC daemon
-[   14.741951] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
-[   14.741973] Bluetooth: BNEP filters: protocol multicast
-[   14.741997] Bluetooth: BNEP socket layer initialized
-[   14.766963] nfc: nfc_init: NFC Core ver 0.1
-[   14.767123] NET: Registered PF_NFC protocol family
-[   17.637713] platform 5010000.spi: deferred probe pending
+[    9.300351] nfc: nfc_init: NFC Core ver 0.1
+[    9.300500] NET: Registered PF_NFC protocol family
+[    9.303767] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    9.303788] Bluetooth: BNEP filters: protocol multicast
+[    9.303808] Bluetooth: BNEP socket layer initialized
 
 Poky (Yocto Project Reference Distro) 4.3+snapshot-abeea5c797a628d676f07edc7177c461e75588b7 orange-pi-zero3 /dev/ttyS0
 
-orange-pi-zero3 login: 
+orange-pi-zero3 login:
