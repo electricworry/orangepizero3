@@ -1,3 +1,6 @@
+# This makefile is just an accessory for fast turnaround of building and testing.
+# To use, source poky/oe... as normal then run make here.
+# Not intended for production use.
 
 .PHONY: build write
 
