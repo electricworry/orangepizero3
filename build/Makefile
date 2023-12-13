@@ -19,7 +19,7 @@ them:
 	rm workspace/sources/linux-mainline; ln -s linux-mainline.them workspace/sources/linux-mainline
 
 write:
-	sudo umount /dev/sdb1 /dev/sdb2
+	sudo umount /dev/sdb?
 	sudo bmaptool copy ./tmp/deploy/images/orange-pi-zero3/core-image-minimal-orange-pi-zero3.rootfs.wic.gz /dev/sdb
 
 console:
