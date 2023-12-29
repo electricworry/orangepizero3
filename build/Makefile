@@ -5,7 +5,7 @@
 .PHONY: build write
 
 build:
-	bitbake core-image-minimal
+	bitbake core-image-base
 
 clean:
 	bitbake -c clean linux-mainline && bitbake -c cleansstate linux-mainline
@@ -20,7 +20,7 @@ them:
 
 write:
 	sudo umount /dev/sdb?
-	sudo bmaptool copy ./tmp/deploy/images/orange-pi-zero3/core-image-minimal-orange-pi-zero3.rootfs.wic.gz /dev/sdb
+	sudo bmaptool copy ./tmp/deploy/images/orange-pi-zero3/core-image-base-orange-pi-zero3.rootfs.wic.gz /dev/sdb
 
 console:
 	sudo tio /dev/ttyUSB0
