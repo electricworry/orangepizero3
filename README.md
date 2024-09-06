@@ -33,4 +33,9 @@ And using defconfig-vendor in place of
 layers/meta-sunxi/recipes-kernel/linux/linux-mainline-dev/aarch64/defconfig
 works.
 
-Compare the "working" fork to v????? to find patches to resolve.
+OpiZ2 6.6 works and instantly spits out to console.
+OpiZ2 6.11 is the same.
+
+Compare the "working" vendor fork to linux-stable 6.1.31 to find patches to resolve.
+
+How to get over the lack of kernel output?
