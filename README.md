@@ -1,5 +1,7 @@
 # Making a BSP for OrangePi Zero3
 
+This branch uses mainline linux. Stuck at "Starting kernel ..."
+
 ```
 bitbake core-image-minimal
 ```
