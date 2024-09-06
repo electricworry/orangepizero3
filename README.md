@@ -1,6 +1,6 @@
 # Making a BSP for OrangePi Zero3
 
-This branch uses mainline linux. Stuck at "Starting kernel ..."
+This branch uses mainline linux.
 
 ```
 bitbake core-image-minimal
@@ -18,3 +18,19 @@ docker run --rm -it -v $HOME/bitbake-downloads:/home/pokyuser/bitbake-downloads 
 ```
 BB_NO_NETWORK = "1"
 ```
+
+## Mainline doesn't work
+
+Stuck at "Starting kernel ..."
+
+However, changing kernel in layers/meta-sunxi/recipes-kernel/linux/linux-mainline-dev.bb to:
+
+SRC_URI = "git://github.com/orangepi-xunlong/linux-orangepi;branch=orange-pi-6.1-sun50iw9;protocol=https \
+	   file://defconfig \
+"
+
+And using defconfig-vendor in place of
+layers/meta-sunxi/recipes-kernel/linux/linux-mainline-dev/aarch64/defconfig
+works.
+
+Compare the "working" fork to v????? to find patches to resolve.
